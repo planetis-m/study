@@ -1,6 +1,6 @@
 {
-  "name": "study-ai-ocr",
+  "name": "study",
   "version": "1.2.0",
-  "description": "Study-AI extension for processing lecture slides and generating notes using OCR.",
+  "description": "Study extension for processing lecture slides and generating notes using OCR.",
   "commands": "commands"
 }
