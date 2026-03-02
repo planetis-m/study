@@ -13,6 +13,8 @@ You MUST use your shell/bash execution tool to run the standalone `pdfocr` CLI a
 ## Command Workflow
 - **extract** → Extract and clean PDFs using `pdfocr`
 - **analyze** → Generate study notes from cleaned content
+- **lecture** → Transform slides into a cohesive, professor-style narrative
+- **eli5** → Explain concepts using plain English
 - **quiz** → Create practice questions
 - **essay** → Generate essay-style questions
 - **study-notes** → Complete pipeline (extract via `pdfocr` → analyze). Do not call commands recursively.

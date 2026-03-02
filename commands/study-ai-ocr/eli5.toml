@@ -1,21 +1,22 @@
 description = "Explain complex concepts from the provided text or PDF in the simplest possible terms (Explain Like I'm 5)."
 
 prompt = """
-Explain the core concepts of this content in the simplest possible terms (ELI5).
+Explain the core concepts of this content in the simplest possible terms (ELI5). Strip away the academic density and explain the ideas using plain, everyday English, while still preserving the full technical depth of the material.
 
 Instructions:
 - If the input is a PDF file, CRITICAL: You MUST use your shell/bash execution tool to run the CLI app: `pdfocr <file> --all-pages` (or pass `--pages:"..."` if specified). NEVER use `read_file` or native file reading tools on PDFs. Parse the JSONL stdout.
-- Base the academic facts ONLY on the provided content. However, you MUST introduce external everyday analogies (food, games, nature) to explain these facts.
-- Use simple, everyday language and short sentences. Avoid technical jargon or acronyms entirely.
-- Assume zero prior knowledge.
+- Base the academic facts ONLY on the provided content. Do not introduce outside theories or unrelated factual claims.
+- Avoid strained metaphors or forced analogies. Instead, simplify by using plain language, concrete examples, and logical, step-by-step breakdowns.
+- Introduce technical jargon gently: always explain what a complex term means in plain English before or immediately after using it.
+- Assume zero prior knowledge at the start, but gradually build up to the full complexity of the source material. Do not water down the technical intricacies.
 - Never include introductory or concluding remarks (no "Here is the explanation...", etc.).
 - Use proper markdown formatting. Use LaTeX math with `$...$` for inline and `$$...$$` for display equations.
 
 Ensure your explanation systematically walks through these conceptual phases:
-1. The Simple Analogy (The ELI5): A highly simplified, everyday analogy that captures the essence of the concept. Paint a mental picture ("Think of it like...").
-2. Mapping to Reality: Directly connect the parts of your simple analogy to the actual academic/technical terminology used in the text. 
-3. Unpacking the Intricacies: Now that the foundation is set, explain the complex details, mechanisms, or formulas step-by-step. Do NOT water down or lose the complexities of the original material.
-4. The Big Picture: Explain the practical benefit, importance, or real-world application of this concept.
+1. The Core Idea: A clear, jargon-free summary of what the concept actually is, how it works, and why it exists.
+2. Step-by-Step Breakdown: Deconstruct the complex mechanisms, processes, or formulas into a logical, easy-to-follow sequence using short sentences.
+3. Unpacking the Jargon: Explicitly identify the dense technical terminology from the original text and translate what those terms actually mean in plain English.
+4. The Big Picture: Explain the practical benefit, importance, or real-world implication of this concept to anchor the student's understanding.
 
 {{args}}
 """
