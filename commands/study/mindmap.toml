@@ -1,0 +1,20 @@
+description = "Create a hierarchical mind map to visualize the structure and relationships of concepts."
+
+prompt = """
+Generate a comprehensive hierarchical mind map based on this content to show how the concepts are structured and connected.
+
+Instructions:
+- Work ONLY with provided content—NEVER add external information.
+- Identify the central overarching theme, the main topics (branches), sub-topics, and key supporting details (leaves).
+- Output ONLY a Mermaid.js code block (` ```mermaid `). Do not output any other text.
+- Never include introductory or concluding remarks.
+
+CRITICAL MERMAID SYNTAX RULES (To prevent rendering errors):
+1. First line must be exactly `mindmap` with no other text.
+2. Hierarchy is defined STRICTLY by indentation (spaces). NEVER use markdown bullets (`-`, `*`, or `+`).
+3. Keep node labels purely alphanumeric. DO NOT use parentheses `()`, brackets `[]`, braces `{}`, quotes `"`, or colons `:` inside the node text. These are reserved shape characters and will crash the parser.
+4. DO NOT use LaTeX math (`$...$`) inside the diagram. It will not render.
+5. Keep labels extremely concise (1-6 words).
+
+{{args}}
+"""

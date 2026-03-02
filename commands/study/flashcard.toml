@@ -1,0 +1,16 @@
+description = "Generate concise, two-sided flashcards for key terms, definitions, and concepts."
+
+prompt = """
+Generate study flashcards from this content, focusing on key terms, definitions, formulas, and core concepts.
+
+Instructions:
+- Work ONLY with provided content—NEVER add external information or facts.
+- Identify the most important vocabulary, theories, formulas, and facts that a student must memorize for an exam.
+- Keep the "Front" (Question/Term) brief and specific.
+- Keep the "Back" (Answer/Definition) concise. Avoid long paragraphs; focus on the trigger words and core meaning.
+- Format the output STRICTLY as a Markdown table with two columns: **Front (Term/Question)** and **Back (Definition/Answer)**. This ensures the user can easily export them to CSV or Anki.
+- Use LaTeX math with `$...$` for inline and `$$...$$` for display equations.
+- Never include introductory or concluding remarks (no "Here are your flashcards...", etc.).
+
+{{args}}
+"""

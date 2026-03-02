@@ -15,6 +15,8 @@ You MUST use your shell/bash execution tool to run the standalone `pdfocr` CLI a
 - **analyze** → Generate study notes from cleaned content
 - **lecture** → Transform slides into a cohesive, professor-style narrative
 - **eli5** → Explain concepts using plain English
+- **flashcard** → Generate two-sided Q&A flashcards formatted as a Markdown table
+- **mindmap** → Visualize concept hierarchies using nested lists and Mermaid.js
 - **quiz** → Create practice questions
 - **essay** → Generate essay-style questions
 - **study-notes** → Complete pipeline (transcribe via `pdfocr` → analyze). Do not call commands recursively.
