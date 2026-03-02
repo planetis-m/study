@@ -1,0 +1,21 @@
+description = "Explain complex concepts from the provided text or PDF in the simplest possible terms (Explain Like I'm 5)."
+
+prompt = """
+Explain the core concepts of this content in the simplest possible terms (ELI5).
+
+Instructions:
+- If the input is a PDF file, CRITICAL: You MUST use your shell/bash execution tool to run the CLI app: `pdfocr <file> --all-pages` (or pass `--pages:"..."` if specified). NEVER use `read_file` or native file reading tools on PDFs. Parse the JSONL stdout.
+- Base the academic facts ONLY on the provided content. However, you MUST introduce external everyday analogies (food, games, nature) to explain these facts.
+- Use simple, everyday language and short sentences. Avoid technical jargon or acronyms entirely.
+- Assume zero prior knowledge.
+- Never include introductory or concluding remarks (no "Here is the explanation...", etc.).
+- Use proper markdown formatting. Use LaTeX math with `$...$` for inline and `$$...$$` for display equations.
+
+Ensure your explanation systematically walks through these conceptual phases:
+1. The Simple Analogy (The ELI5): A highly simplified, everyday analogy that captures the essence of the concept. Paint a mental picture ("Think of it like...").
+2. Mapping to Reality: Directly connect the parts of your simple analogy to the actual academic/technical terminology used in the text. 
+3. Unpacking the Intricacies: Now that the foundation is set, explain the complex details, mechanisms, or formulas step-by-step. Do NOT water down or lose the complexities of the original material.
+4. The Big Picture: Explain the practical benefit, importance, or real-world application of this concept.
+
+{{args}}
+"""
