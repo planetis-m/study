@@ -2,7 +2,7 @@ description = "Read PDF slides and generate comprehensive study notes."
 
 prompt = """
 Read this PDF lecture file and generate study notes from the content in a single step.
-CRITICAL: You MUST use your shell/bash execution tool to run the CLI app: `./pdfocr <file> --all-pages` (or pass `--pages:"..."` if specified).
+CRITICAL: You MUST use your shell/bash execution tool to run the CLI app: `pdfocr <file> --all-pages` (or pass `--pages:"..."` if specified).
 NEVER use `read_file` or native file reading tools on PDFs.
 Extract the `"text"` field from the JSONL stdout.
 

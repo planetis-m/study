@@ -2,7 +2,7 @@ description = "Clean PDF lecture slides by removing metadata and formatting arti
 
 prompt = """
 Extract and clean this PDF lecture file.
-CRITICAL: You MUST use your shell/bash execution tool to run the CLI app: `./pdfocr <file> --all-pages` (or pass `--pages:"..."` if specified).
+CRITICAL: You MUST use your shell/bash execution tool to run the CLI app: `pdfocr <file> --all-pages` (or pass `--pages:"..."` if specified).
 NEVER use `read_file` or native file reading tools on PDFs.
 Extract the `"text"` field from the JSONL stdout.
 
