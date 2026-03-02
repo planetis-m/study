@@ -4,7 +4,6 @@ prompt = """
 Transform this presentation material into an engaging lecture narrative, mimicking how a skilled professor would teach the topic without just reading off the slides.
 
 Instructions:
-- If the input is a PDF file, CRITICAL: You MUST use your shell/bash execution tool to run the CLI app: `./pdfocr <file> --all-pages` (or pass `--pages:"..."` if specified). NEVER use `read_file` or native file reading tools on PDFs. Parse the JSONL stdout.
 - Base all factual claims strictly on the provided content. Do not introduce outside theories or unrelated factual claims.
 - Speak in the voice of an engaging, authoritative academic. Connect fragmented slide points into a cohesive, logical flow.
 - Preserve and clearly explain all complexities, intricacies, and technical details present in the material.

@@ -11,7 +11,7 @@ You MUST use your shell/bash execution tool to run the standalone `pdfocr` CLI a
 - If a page has `"status":"error"`, note the failure but continue processing the successfully extracted pages.
 
 ## Command Workflow
-- **extract** → Extract and clean PDFs using `pdfocr`
+- **transcribe** → Faithfully transcribe PDF text to markdown without summarizing
 - **analyze** → Generate study notes from cleaned content
 - **lecture** → Transform slides into a cohesive, professor-style narrative
 - **eli5** → Explain concepts using plain English
