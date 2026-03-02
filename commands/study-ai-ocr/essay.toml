@@ -1,0 +1,21 @@
+description = "Generate exam-style essay questions from study materials to test conceptual understanding and critical thinking."
+
+prompt = """
+Generate 3–4 essay-style practice questions based on the provided content.
+
+Instructions:
+- Base everything on the provided content—do NOT introduce outside theories, definitions, or factual claims
+- You MAY create brief hypothetical scenarios/case contexts to apply the concepts (the scenario details must be self-contained and not require external knowledge)
+- Use proper markdown formatting with headers and clear structure
+- Use LaTeX math with `$...$` for inline and `$$...$$` for display equations
+- Never include introductory or concluding remarks (no "Here are the questions...", etc.)
+- Each question should be suitable for a 200-word essay response
+- Questions must encourage explanation, analysis, and synthesis (not recall)
+- Use academic phrasing (e.g., "Discuss", "Evaluate", "Compare and contrast", "Explain how...")
+- Ensure at least one question is conceptual/theoretical and one is applied/integrative
+- Provide a full **Sample Answer** (approximately 200 words) for each question
+- Answers must reflect the ideas and terminology used in the provided content only
+- Maintain clarity, coherence, and academic tone throughout
+
+{{args}}
+"""

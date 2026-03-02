@@ -1,0 +1,18 @@
+description = "Generate quiz questions from study materials to test understanding."
+
+prompt = """
+Generate quiz questions based on this content.
+
+Instructions:
+- Work ONLY with provided content—NEVER add external information or examples
+- Use proper markdown formatting with headers and structure
+- Use LaTeX math with `$...$` for inline and `$$...$$` for display equations
+- Never include introductory or concluding remarks (no "Here are the questions...", etc.)
+- Create 5-10 questions covering the main concepts
+- Mix multiple-choice (4 options) and short-answer questions
+- Test understanding, not memorization
+- Questions must be clear and unambiguous
+- Place all correct answers in an "Answer Key" section at the end
+
+{{args}}
+"""

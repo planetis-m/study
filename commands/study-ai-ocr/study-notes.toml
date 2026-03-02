@@ -1,0 +1,26 @@
+description = "Complete pipeline: extract PDF using pdfocr, clean, and generate study notes."
+
+prompt = """
+Process this PDF lecture file through the complete pipeline (extract via `pdfocr` → clean → analyze).
+
+Instructions:
+- First, execute `pdfocr <file> --all-pages` (or with `--pages:"..."` if specified) to extract the text. Parse the JSONL output to gather the `"text"` fields.
+- Work ONLY with provided content—NEVER add external information or examples.
+- Use proper markdown formatting with headers and structure.
+- Use LaTeX math with `$...$` for inline and `$$...$$` for display equations.
+- Never include introductory or concluding remarks (no "Here are the notes...", etc.).
+
+For extraction and cleaning:
+- Remove metadata (instructor info, headers, footers, page numbers, timestamps, course codes).
+- Preserve educational content (concepts, definitions, examples) that is clearly readable.
+
+For generating study notes:
+- Write in a clear, informative style that promotes understanding over memorization.
+- Organize content by key topics with clear headers. For each topic, provide:
+  - Detailed explanation of the concept
+  - Essential facts or definitions needed for exams
+  - Relationships and connections between concepts
+  - Present information in a logical, progressive flow.
+
+{{args}}
+"""
